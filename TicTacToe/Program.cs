@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Security.Cryptography.X509Certificates;
+using System.Text;
 
 namespace TicTacToe
 {
@@ -16,7 +17,8 @@ namespace TicTacToe
             string H = "8";
             string I = "9";
             string turn = "Player1";
-            string player1, player2;
+            string turn2 = "Player2";
+            string player1, player2, selection;
 
             Console.WriteLine("Vítejte ve hře");
             Console.WriteLine("Zmáčkněte jakoukoliv klávesu pro pokračování");
@@ -30,7 +32,155 @@ namespace TicTacToe
 
             if (turn == "Player1")
             {
+                Console.Clear();
+                Console.WriteLine("Player1: " + player1 + "tah");
+                Console.WriteLine("");
+                Console.WriteLine(A + "|" + B + "|" + C);
+                Console.WriteLine(D + "|" + E + "|" + F);
+                Console.WriteLine(G + "|" + H + "|" + I);
+                Console.WriteLine("****");
+                Console.WriteLine("Rozhodněte se");
+                selection = Console.ReadLine();
+                if (selection == "1")
+                {
+                    if (A == "1")
+                    {
+                        A = "X";
+                    }
+                    else
+                    {
+                        Console.WriteLine("Políčko je používané");
+                    }
+                }
 
+                if (selection == "2")
+                {
+                    if (B == "2")
+                    {
+                        B = "X";
+                    }
+                    else
+                    {
+                        Console.WriteLine("Políčko je používané");
+                    }
+                }
+
+                if (selection == "3")
+                {
+                    if (C == "3")
+                    {
+                        C = "3";
+                    }
+                    else
+                    {
+                        Console.WriteLine("Políčko je používané");
+                    }
+                }
+
+                if (selection == "4")
+                {
+                    if (D == "4")
+                    {
+                        D = "X";
+                    }
+                    else
+                    {
+                        Console.WriteLine("Políčko je používané");
+                    }
+                }
+
+                if (selection == "5")
+                {
+                    if (E == "5")
+                    {
+                        E = "X";
+                    }
+                    else
+                    {
+                        Console.WriteLine("Políčko je používané");
+                    }
+                }
+
+                if (selection == "6")
+                {
+                    if (F == "6")
+                    {
+                        F = "X";
+                    }
+                    else
+                    {
+                        Console.WriteLine("Políčko je používané");
+                    }
+                }
+
+                if (selection == "7")
+                {
+                    if (G == "7")
+                    {
+                        G = "X";
+                    }
+                    else
+                    {
+                        Console.WriteLine("Políčko je používané");
+                    }
+                }
+
+                if (selection == "8")
+                {
+                    if (H == "8")
+                    {
+                        H = "X";
+                    }
+                    else
+                    {
+                        Console.WriteLine("Políčko je používané");
+                    }
+                }
+
+                if (selection == "9")
+                {
+                    if (I == "9")
+                    {
+                        I = "X";
+                    }
+                    else
+                    {
+                        Console.WriteLine("Políčko je používané");
+                    }
+                }
+
+                if (A == B & B == C)
+                {
+
+                }
+                if (D == E & E == F)
+                {
+
+                }
+                if (G == H & H == I)
+                {
+
+                }
+                if (A == D & D == G)
+                {
+
+                }
+                if (B == E & E == H)
+                {
+
+                }
+                if (C == F & F == I)
+                {
+
+                }
+                if (G == E & E == C)
+                {
+
+                }
+                if (A == E & E == I)
+                {
+
+                }
             }
         }
     }
