@@ -22,21 +22,21 @@ namespace TicTacToe
             string player1, player2, selection;
 
             Console.WriteLine("Vítejte ve hře");
-            Console.WriteLine("Zmáčkněte jakoukoliv klávesu pro pokračování");
+            Console.WriteLine("Zmáčkněte enter pro pokračování");
             Console.ReadLine();
             Console.Clear();
             Console.WriteLine("Jméno prvního hráče: ");
             player1 = Console.ReadLine();
             Console.WriteLine("Jméno druhého hráče: ");
             player2 = Console.ReadLine();
-        Start:
+            Start:
             Console.Clear();
 
             if (turn == "Player1")
             {
                 turn = "Player2";
                 Console.Clear();
-                Console.WriteLine("Player1: " + player1 + "tah");
+                Console.WriteLine("Player1: " + player1 + " je na tahu");
                 Console.WriteLine("");
                 Console.WriteLine(A + "|" + B + "|" + C);
                 Console.WriteLine(D + "|" + E + "|" + F);
@@ -287,7 +287,7 @@ namespace TicTacToe
             {
                 turn = "Player1";
                 Console.Clear();
-                Console.WriteLine("Player2: " + player2 + "tah");
+                Console.WriteLine("Player2: " + player2 + " je na tahu");
                 Console.WriteLine("");
                 Console.WriteLine(A + "|" + B + "|" + C);
                 Console.WriteLine(D + "|" + E + "|" + F);
@@ -525,6 +525,7 @@ namespace TicTacToe
                     selection = Console.ReadLine();
                     if (selection == "Y")
                     {
+
                         hratZnovu = "true";
                     }
                     else
@@ -539,7 +540,20 @@ namespace TicTacToe
             }
             if (hratZnovu == "true")
             {
+                A = "1";
+                B = "2";
+                C = "3";
+                D = "4";
+                E = "5";
+                F = "6";
+                G = "7";
+                H = "8";
+                I = "9";
                 goto Start;
+            }
+            else
+            {
+                Console.WriteLine("Děkuji za hru!");
             }
 
         }
